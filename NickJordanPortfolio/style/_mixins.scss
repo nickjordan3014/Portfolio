@@ -1,0 +1,86 @@
+//images mixin
+@mixin images {
+    //creating a responsive word wrap for the logo
+    .logo {
+        width: 200px; //set width of the logo to good size for all three screens
+        float: left; //positioned the image on the left hand side of the grid
+        text-align: center;
+        padding-top: 15px;
+        padding-left: 10px;
+        margin: 5px 20px 10px 0;
+    }
+    //edited the size of the different website example images
+    .size {
+        width: 100%;
+        border-style: groove; //added a border style to give a frame like effect to the images
+        border-color: $tcolor;
+    }
+    //spaced out the social media icons
+    .space {
+        padding: 10px;
+    }
+    //edited the header marrgin and padding to be 0
+    .header {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
+//mixin to style body attributes
+@mixin body {
+    //edited the full body to have 0 margin and padding and assign the background color
+    body {
+        background-color: $bgcolor;
+        margin: 0;
+        padding: 0;
+    }
+    //styling the texts with colors, fonts, and font families
+        h1 {
+            color: $tcolor;
+            font-size: 35px;
+            font-family: $hfont;
+        }
+        h2 {
+            color: $tcolor;
+            font-size: 25px;
+            font-family: $hfont;
+            padding-left: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        p {
+            font-family: $pfont;
+            font-size: 18px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 5px;
+        }
+        //editing p attributes for the skills section
+        .skill {
+            padding: 10px;
+            margin: 5px;
+        }
+        //editing p attributes to be used as descprtions
+        .about {
+            font-size: 14px;
+            margin: 0 !important;
+        }
+        //editing the list attribute to make lists more readable
+        li {
+            font-family: $pfont;
+            font-size: 18px;
+        }
+}
+
+@mixin links {
+    //makes the links navy blue and takes away annoying decorations
+    a:link {
+        text-decoration: none;
+        color: navy;
+      }
+      
+      a:visited {
+        text-decoration: none;
+        color: navy;
+      }
+}

@@ -1,0 +1,112 @@
+@import "_variables.scss";
+
+//grid mixin
+@mixin grid {
+    //small screen
+    @media screen and (max-width: 600px) {
+        //styling grid attribute
+        .grid {
+            display: grid;
+            grid-template-columns: auto;
+        }
+        //auto assigning the current grid box
+        .title {
+            grid-row: auto/span 1;
+            grid-column: 1 /span 1;
+            background-color: $hcolor;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        //makes story attribute 1 by 1 box
+        .content {
+            text-align: center !important;
+            grid-column: auto /span 1;
+            padding-bottom: 0 !important;
+        }
+        .content2 {
+            grid-column: auto /span 1;
+            text-align: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        //left aligning skills attribute
+        .skills {
+            grid-column: auto /span 1;
+            text-align: left !important;
+        }
+    }
+
+    //medium screen
+    @media screen and (min-width: 600px) {
+        //styling grid attribute
+        .grid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        //spanning the full grid box across both columns
+        .title {
+            grid-row: auto/span 1;
+            grid-column: 1 /span 2;
+            background-color: $hcolor;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        //makes story attribute 1 by 1 box
+        .content {
+            grid-column: auto /span 2;
+            text-align: left !important;
+            margin: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        //sets padding and margin to 0
+        .content2 {
+            grid-column: auto /span 2;
+            text-align: left !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        //left aligning skills attribute
+        .skills {
+            grid-column: auto /span 2;
+            text-align: left !important;
+        }
+    }
+
+    //large screen
+    @media screen and (min-width: 992px) {
+        //styling grid attribute
+        .grid {
+            display: grid;
+            grid-template-columns: 33% 33% 34%;
+        }
+        //spanning the full grid box across three columns
+        .title {
+            grid-row: auto/span 1;
+            grid-column: 1 /span 3;
+            background-color: $hcolor;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        //story attribute takes up two column spaces
+        .content {
+            grid-column: auto /span 2;
+            text-align: left !important;
+            margin: 0 !important;
+        }
+        //creates a second column on a large screen for the story
+        .content2 {
+            grid-column: auto /span 1;
+            text-align: left !important;
+            margin: 0 !important;
+        }
+        //centers the 4th website on a large screen size
+        .square2 {
+            grid-column: 2/ span 1;
+        }
+        //puts skills attribute on its own row
+        .skills {
+            grid-column: auto /span 3;
+            text-align: left !important;
+        }
+    }
+}

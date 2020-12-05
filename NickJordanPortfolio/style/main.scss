@@ -1,0 +1,33 @@
+//imports the grids, variables and mixins into the main scss file
+@import "_variables";
+@import "_grids";
+@import "_mixins";
+
+//includes the grid mixin from the grids.scss file
+@include grid;
+//formating grid items
+.grid-item {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    //border: 1px solid black;
+}
+
+//includes the body formatting from the minxin.scss file
+@include body;
+
+//includes the the images mixin from the mixins.scss file
+@include images;
+
+//inclides the styling for the links
+@include links;
+
+//formatting the footer 
+footer {
+    text-align: center;
+    background-color: $hcolor;
+}
+//formatting the horizontal line to be the color black
+hr {
+    border: black 1px solid;
+}
